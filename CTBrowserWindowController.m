@@ -36,4 +36,12 @@
 	[self.webView setMainFrameURL:@"http://realmacsoftware.lighthouseapp.com"];
 }
 
+#pragma mark -
+#pragma mark WebFrame Load Delegates
+
+- (void)webView:(WebView *)sender didReceiveTitle:(NSString *)title forFrame:(WebFrame *)frame
+{
+	[self.window setTitle:title];
+}
+
 @end
