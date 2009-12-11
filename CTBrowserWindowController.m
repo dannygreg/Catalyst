@@ -28,12 +28,34 @@
 
 #import <WebKit/WebKit.h>
 
+@interface CTBrowserWindowController ()
+
+- (void)_showProgressView;
+- (void)_hideProgressView;
+
+@end
+
 @implementation CTBrowserWindowController
-@synthesize webView = _webView;
+@synthesize webView = _webView, progressView = _progressView;
 
 - (void)awakeFromNib
 {
+	[self.progressView setAlphaValue:0.0];
 	[self.webView setMainFrameURL:@"http://realmacsoftware.lighthouseapp.com"];
+}
+
+#pragma mark -
+
+- (void)_showProgressView
+{
+	[[self.window contentView] addSubview:self.progressView];
+	[[self.progressView animator] setAlphaValue:1.0];
+}
+
+- (void)_hideProgressView
+{
+	[[self.progressView animator] setAlphaValue:0.0];
+	[self.progressView removeFromSuperview];
 }
 
 #pragma mark -
@@ -42,6 +64,16 @@
 - (void)webView:(WebView *)sender didReceiveTitle:(NSString *)title forFrame:(WebFrame *)frame
 {
 	[self.window setTitle:title];
+}
+
+- (void)webView:(WebView *)sender didStartProvisionalLoadForFrame:(WebFrame *)frame
+{
+	[self _showProgressView];
+}
+
+- (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
+{
+	[self _hideProgressView];
 }
 
 @end

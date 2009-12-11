@@ -31,5 +31,6 @@
 @interface CTBrowserWindowController : NSWindowController {}
 
 @property IBOutlet WebView *webView;
+@property IBOutlet NSView *progressView;
 
 @end
