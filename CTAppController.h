@@ -24,16 +24,8 @@
 
 //*******************************************************************************
 
-#import "CTBrowserWindowController.h"
+#import <Cocoa/Cocoa.h>
 
-#import <WebKit/WebKit.h>
-
-@implementation CTBrowserWindowController
-@synthesize webView = _webView;
-
-- (void)awakeFromNib
-{
-	[self.webView setMainFrameURL:@"http://realmacsoftware.lighthouseapp.com"];
-}
+@interface CTAppController : NSObject <NSApplicationDelegate> {}
 
 @end

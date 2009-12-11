@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* CatalystAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* CatalystAppDelegate.m */; };
+		256AC3DA0F4B6AC300CF3369 /* CTAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* CTAppController.m */; };
 		30D5666410D1A5B3000713A1 /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30D5666310D1A5B3000713A1 /* BrowserWindow.xib */; };
 		30EFD3B510D2FFC200EFD001 /* CTBrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EFD3B410D2FFC200EFD001 /* CTBrowserWindowController.m */; };
+		30EFD3CC10D304C300EFD001 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EFD3CB10D304C300EFD001 /* WebKit.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -21,8 +22,8 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		256AC3D80F4B6AC300CF3369 /* CatalystAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalystAppDelegate.h; sourceTree = "<group>"; };
-		256AC3D90F4B6AC300CF3369 /* CatalystAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalystAppDelegate.m; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* CTAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAppController.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* CTAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAppController.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* Catalyst_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Catalyst_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -30,6 +31,7 @@
 		30D5666110D1A5AE000713A1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/BrowserWindow.xib; sourceTree = "<group>"; };
 		30EFD3B310D2FFC200EFD001 /* CTBrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBrowserWindowController.h; sourceTree = "<group>"; };
 		30EFD3B410D2FFC200EFD001 /* CTBrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBrowserWindowController.m; sourceTree = "<group>"; };
+		30EFD3CB10D304C300EFD001 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Catalyst-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Catalyst-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Catalyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalyst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -40,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				30EFD3CC10D304C300EFD001 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,8 +52,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				256AC3D80F4B6AC300CF3369 /* CatalystAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* CatalystAppDelegate.m */,
+				256AC3D80F4B6AC300CF3369 /* CTAppController.h */,
+				256AC3D90F4B6AC300CF3369 /* CTAppController.m */,
 				30EFD3B310D2FFC200EFD001 /* CTBrowserWindowController.h */,
 				30EFD3B410D2FFC200EFD001 /* CTBrowserWindowController.m */,
 			);
@@ -60,6 +63,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30EFD3CB10D304C300EFD001 /* WebKit.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -184,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				256AC3DA0F4B6AC300CF3369 /* CatalystAppDelegate.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* CTAppController.m in Sources */,
 				30EFD3B510D2FFC200EFD001 /* CTBrowserWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

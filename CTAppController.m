@@ -24,16 +24,26 @@
 
 //*******************************************************************************
 
+#import "CTAppController.h"
 #import "CTBrowserWindowController.h"
 
-#import <WebKit/WebKit.h>
+@interface CTAppController ()
 
-@implementation CTBrowserWindowController
-@synthesize webView = _webView;
+@property CTBrowserWindowController *browserWindowController;
+
+@end
+
+@implementation CTAppController
+@synthesize browserWindowController = _browserWindowController;
 
 - (void)awakeFromNib
 {
-	[self.webView setMainFrameURL:@"http://realmacsoftware.lighthouseapp.com"];
+	self.browserWindowController = [[CTBrowserWindowController alloc] initWithWindowNibName:@"BrowserWindow"];
+	[self.browserWindowController showWindow:self];
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	// Insert code here to initialize your application 
 }
 
 @end
