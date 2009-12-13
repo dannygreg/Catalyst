@@ -11,6 +11,7 @@
 		256AC3DA0F4B6AC300CF3369 /* CTAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* CTAppController.m */; };
 		304E2BA310D55EFB00F05206 /* NSUserDefaults+CTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E2BA210D55EFB00F05206 /* NSUserDefaults+CTExtensions.m */; };
 		30A9940310D566CF001DA98A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A9940210D566CF001DA98A /* Cocoa.framework */; };
+		30A9941710D5688E001DA98A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A9941410D567CE001DA98A /* main.m */; };
 		30D5666410D1A5B3000713A1 /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30D5666310D1A5B3000713A1 /* BrowserWindow.xib */; };
 		30EFD3B510D2FFC200EFD001 /* CTBrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EFD3B410D2FFC200EFD001 /* CTBrowserWindowController.m */; };
 		30EFD3CC10D304C300EFD001 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EFD3CB10D304C300EFD001 /* WebKit.framework */; };
@@ -35,6 +36,7 @@
 		30A993FC10D566C3001DA98A /* Catalyst Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Catalyst Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A993FE10D566C3001DA98A /* Catalyst Creator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Catalyst Creator-Info.plist"; sourceTree = "<group>"; };
 		30A9940210D566CF001DA98A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		30A9941410D567CE001DA98A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Creator/main.m; sourceTree = "<group>"; };
 		30D5666110D1A5AE000713A1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/BrowserWindow.xib; sourceTree = "<group>"; };
 		30EFD3B310D2FFC200EFD001 /* CTBrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBrowserWindowController.h; sourceTree = "<group>"; };
 		30EFD3B410D2FFC200EFD001 /* CTBrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBrowserWindowController.m; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		30A9941310D5671E001DA98A /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				30A9941410D567CE001DA98A /* main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30A9941710D5688E001DA98A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
