@@ -26,6 +26,8 @@
 
 #import "CTBrowserWindowController.h"
 
+#import "NSUserDefaults+CTExtensions.h"
+
 #import <WebKit/WebKit.h>
 
 NSString *const CTHomeLocationDefaultsKey = @"CTHomeLocation";
@@ -43,10 +45,7 @@ NSString *const CTHomeLocationDefaultsKey = @"CTHomeLocation";
 - (void)awakeFromNib
 {
 	[self.progressView setAlphaValue:0.0];
-	NSString *home = [[NSUserDefaults standardUserDefaults] stringForKey:CTHomeLocationDefaultsKey];
-	if (home == nil) 
-		home = [[NSBundle mainBundle] objectForInfoDictionaryKey:CTHomeLocationDefaultsKey];
-	[self.webView setMainFrameURL:home];
+	[self.webView setMainFrameURL:[[NSUserDefaults standardUserDefaults] objectForInfoDictionaryKey:CTHomeLocationDefaultsKey]];
 }
 
 #pragma mark -

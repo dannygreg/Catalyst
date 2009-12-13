@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* CTAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* CTAppController.m */; };
+		304E2BA310D55EFB00F05206 /* NSUserDefaults+CTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E2BA210D55EFB00F05206 /* NSUserDefaults+CTExtensions.m */; };
 		30D5666410D1A5B3000713A1 /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30D5666310D1A5B3000713A1 /* BrowserWindow.xib */; };
 		30EFD3B510D2FFC200EFD001 /* CTBrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EFD3B410D2FFC200EFD001 /* CTBrowserWindowController.m */; };
 		30EFD3CC10D304C300EFD001 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EFD3CB10D304C300EFD001 /* WebKit.framework */; };
@@ -28,6 +29,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		304E2BA110D55EFB00F05206 /* NSUserDefaults+CTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+CTExtensions.h"; sourceTree = "<group>"; };
+		304E2BA210D55EFB00F05206 /* NSUserDefaults+CTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+CTExtensions.m"; sourceTree = "<group>"; };
 		30D5666110D1A5AE000713A1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/BrowserWindow.xib; sourceTree = "<group>"; };
 		30EFD3B310D2FFC200EFD001 /* CTBrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBrowserWindowController.h; sourceTree = "<group>"; };
 		30EFD3B410D2FFC200EFD001 /* CTBrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBrowserWindowController.m; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		29B97314FDCFA39411CA2CEA /* Catalyst */ = {
 			isa = PBXGroup;
 			children = (
+				304E2BB110D560EF00F05206 /* Categories */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -126,6 +130,15 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		304E2BB110D560EF00F05206 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				304E2BA110D55EFB00F05206 /* NSUserDefaults+CTExtensions.h */,
+				304E2BA210D55EFB00F05206 /* NSUserDefaults+CTExtensions.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +203,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* CTAppController.m in Sources */,
 				30EFD3B510D2FFC200EFD001 /* CTBrowserWindowController.m in Sources */,
+				304E2BA310D55EFB00F05206 /* NSUserDefaults+CTExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
