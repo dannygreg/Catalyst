@@ -10,6 +10,7 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* CTAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* CTAppController.m */; };
 		304E2BA310D55EFB00F05206 /* NSUserDefaults+CTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E2BA210D55EFB00F05206 /* NSUserDefaults+CTExtensions.m */; };
+		30A9940310D566CF001DA98A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A9940210D566CF001DA98A /* Cocoa.framework */; };
 		30D5666410D1A5B3000713A1 /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30D5666310D1A5B3000713A1 /* BrowserWindow.xib */; };
 		30EFD3B510D2FFC200EFD001 /* CTBrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EFD3B410D2FFC200EFD001 /* CTBrowserWindowController.m */; };
 		30EFD3CC10D304C300EFD001 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EFD3CB10D304C300EFD001 /* WebKit.framework */; };
@@ -31,6 +32,9 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		304E2BA110D55EFB00F05206 /* NSUserDefaults+CTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+CTExtensions.h"; sourceTree = "<group>"; };
 		304E2BA210D55EFB00F05206 /* NSUserDefaults+CTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+CTExtensions.m"; sourceTree = "<group>"; };
+		30A993FC10D566C3001DA98A /* Catalyst Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Catalyst Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30A993FE10D566C3001DA98A /* Catalyst Creator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Catalyst Creator-Info.plist"; sourceTree = "<group>"; };
+		30A9940210D566CF001DA98A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		30D5666110D1A5AE000713A1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/BrowserWindow.xib; sourceTree = "<group>"; };
 		30EFD3B310D2FFC200EFD001 /* CTBrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBrowserWindowController.h; sourceTree = "<group>"; };
 		30EFD3B410D2FFC200EFD001 /* CTBrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBrowserWindowController.m; sourceTree = "<group>"; };
@@ -40,6 +44,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		30A993FA10D566C3001DA98A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A9940310D566CF001DA98A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* Catalyst.app */,
+				30A993FC10D566C3001DA98A /* Catalyst Creator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,12 +106,8 @@
 		29B97314FDCFA39411CA2CEA /* Catalyst */ = {
 			isa = PBXGroup;
 			children = (
-				304E2BB110D560EF00F05206 /* Categories */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
-				19C28FACFE9D520D11CA2CBB /* Products */,
+				30A9940D10D566EB001DA98A /* Catalyst Creator */,
+				30A9940C10D566DD001DA98A /* Catalyst Instance */,
 			);
 			name = Catalyst;
 			sourceTree = "<group>";
@@ -141,9 +150,80 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		30A9940C10D566DD001DA98A /* Catalyst Instance */ = {
+			isa = PBXGroup;
+			children = (
+				304E2BB110D560EF00F05206 /* Categories */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "Catalyst Instance";
+			sourceTree = "<group>";
+		};
+		30A9940D10D566EB001DA98A /* Catalyst Creator */ = {
+			isa = PBXGroup;
+			children = (
+				30A9941310D5671E001DA98A /* Other Sources */,
+				30A9941210D5670F001DA98A /* Frameworks */,
+				30A9941110D56708001DA98A /* Resources */,
+				30A9941010D56701001DA98A /* Classes */,
+			);
+			name = "Catalyst Creator";
+			sourceTree = "<group>";
+		};
+		30A9941010D56701001DA98A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		30A9941110D56708001DA98A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30A993FE10D566C3001DA98A /* Catalyst Creator-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		30A9941210D5670F001DA98A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30A9940210D566CF001DA98A /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30A9941310D5671E001DA98A /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		30A993FB10D566C3001DA98A /* Catalyst Creator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30A9940110D566C4001DA98A /* Build configuration list for PBXNativeTarget "Catalyst Creator" */;
+			buildPhases = (
+				30A993F810D566C3001DA98A /* Resources */,
+				30A993F910D566C3001DA98A /* Sources */,
+				30A993FA10D566C3001DA98A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Catalyst Creator";
+			productName = "Catalyst Creator";
+			productReference = 30A993FC10D566C3001DA98A /* Catalyst Creator.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8D1107260486CEB800E47090 /* Catalyst */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Catalyst" */;
@@ -178,11 +258,19 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Catalyst */,
+				30A993FB10D566C3001DA98A /* Catalyst Creator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		30A993F810D566C3001DA98A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +284,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		30A993F910D566C3001DA98A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,6 +332,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		30A993FF10D566C4001DA98A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Catalyst Creator-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Catalyst Creator";
+			};
+			name = Debug;
+		};
+		30A9940010D566C4001DA98A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Catalyst Creator-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Catalyst Creator";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -303,6 +446,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		30A9940110D566C4001DA98A /* Build configuration list for PBXNativeTarget "Catalyst Creator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30A993FF10D566C4001DA98A /* Debug */,
+				30A9940010D566C4001DA98A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Catalyst" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
