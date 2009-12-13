@@ -28,6 +28,8 @@
 
 #import <WebKit/WebKit.h>
 
+NSString *const CTHomeLocationDefaultsKey = @"CTHomeLocation";
+
 @interface CTBrowserWindowController ()
 
 - (void)_showProgressView;
@@ -41,7 +43,10 @@
 - (void)awakeFromNib
 {
 	[self.progressView setAlphaValue:0.0];
-	[self.webView setMainFrameURL:@"http://realmacsoftware.lighthouseapp.com"];
+	NSString *home = [[NSUserDefaults standardUserDefaults] stringForKey:CTHomeLocationDefaultsKey];
+	if (home == nil) 
+		home = [[NSBundle mainBundle] objectForInfoDictionaryKey:CTHomeLocationDefaultsKey];
+	[self.webView setMainFrameURL:home];
 }
 
 #pragma mark -

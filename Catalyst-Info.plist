@@ -28,5 +28,7 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>CTHomeLocation</key>
+	<string>http://realmacsoftware.lighthouseapp.com</string>
 </dict>
 </plist>
