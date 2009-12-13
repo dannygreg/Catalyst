@@ -28,4 +28,7 @@
 
 @interface CTAppController : NSObject <NSApplicationDelegate> {}
 
+- (void)showHideBrowserWindow;
+- (void)attachStatusItem;
+
 @end

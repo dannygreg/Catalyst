@@ -30,20 +30,36 @@
 @interface CTAppController ()
 
 @property CTBrowserWindowController *browserWindowController;
+@property NSStatusItem *statusItem;
 
 @end
 
 @implementation CTAppController
-@synthesize browserWindowController = _browserWindowController;
+@synthesize browserWindowController = _browserWindowController, statusItem = _statusItem;
 
 - (void)awakeFromNib
 {
 	self.browserWindowController = [[CTBrowserWindowController alloc] initWithWindowNibName:@"BrowserWindow"];
 	[self.browserWindowController showWindow:self];
+	[self attachStatusItem];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	// Insert code here to initialize your application 
+- (void)showHideBrowserWindow
+{
+	([[self.browserWindowController window] isVisible] ? [self.browserWindowController close] : [self.browserWindowController showWindow:self]);
+}
+
+#pragma mark -
+#pragma mark Status Item
+
+- (void)attachStatusItem
+{
+	self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+	NSImage *icon = [NSApp applicationIconImage];
+	[icon setSize:NSMakeSize(20.0, 20.0)];
+	[self.statusItem setImage:icon];
+	[self.statusItem setAction:@selector(showHideBrowserWindow)];
+	[self.statusItem setTarget:self];
 }
 
 @end
