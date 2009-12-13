@@ -46,7 +46,12 @@
 
 - (void)showHideBrowserWindow
 {
-	([[self.browserWindowController window] isVisible] ? [self.browserWindowController close] : [self.browserWindowController showWindow:self]);
+	if ([[self.browserWindowController window] isVisible]) {
+		[self.browserWindowController close];
+	} else {
+		[NSApp activateIgnoringOtherApps:YES];
+		[self.browserWindowController showWindow:self];
+	}
 }
 
 #pragma mark -
@@ -60,6 +65,7 @@
 	[self.statusItem setImage:icon];
 	[self.statusItem setAction:@selector(showHideBrowserWindow)];
 	[self.statusItem setTarget:self];
+	[self.statusItem setHighlightMode:YES];
 }
 
 @end
