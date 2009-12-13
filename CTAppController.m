@@ -27,6 +27,10 @@
 #import "CTAppController.h"
 #import "CTBrowserWindowController.h"
 
+#import "NSUserDefaults+CTExtensions.h"
+
+NSString *CTStatusItemEnabledDefaultsKey = @"CTStatusItemEnabled";
+
 @interface CTAppController ()
 
 @property CTBrowserWindowController *browserWindowController;
@@ -41,7 +45,8 @@
 {
 	self.browserWindowController = [[CTBrowserWindowController alloc] initWithWindowNibName:@"BrowserWindow"];
 	[self.browserWindowController showWindow:self];
-	[self attachStatusItem];
+	if ([[[NSUserDefaults standardUserDefaults] objectForInfoDictionaryKey:CTStatusItemEnabledDefaultsKey] boolValue])
+		[self attachStatusItem];
 }
 
 - (void)showHideBrowserWindow
